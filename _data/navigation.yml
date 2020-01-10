@@ -1,0 +1,35 @@
+# Site navigation links
+
+- title: Dates
+  url: /website/dates.html
+  excerpt:
+  image:
+  lang: en
+
+- title: Call for Papers
+  url: /website/call.html
+  excerpt:
+  image:
+  lang: en
+
+- title: Submission
+  url: /website/submission.html
+  excerpt:
+  image:
+  lang: en
+
+- title: Program
+  url: /website/program.html
+  excerpt:
+  image:
+  lang: en
+
+- title: Organization
+  sublinks:
+    - title: Program Committee
+      url: /website/pc.html
+    - title: Organizing Committee
+      url: /website/organization.html
+  excerpt:
+  image:
+  lang: en

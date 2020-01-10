@@ -1,0 +1,50 @@
+<footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		{% for link in site.data.footer %}
+      {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = site.url %}
+      {% endif %}
+			<li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+		{% endfor %}
+		</ul>
+	</nav><!-- /.bottom-menu -->
+ <!-- 	<div class="copyright">&#169; {{ site.time | date: '%Y' -->
+ <!-- 	}} <a href="{{ site.url }}">{{ site.title }}. </a> -->
+ <!-- 	</div> -->
+ <!-- 	<div align="right"><b> Sponsors:</b>&emsp; -->
+ <!-- 	  <a href="http://www.kr.org"><img src="images/krlogo.png" -->
+
+ <!-- 							    style="height:80px" -->
+ <!-- 							    title="Oslo" -->
+ <!-- 							    alt="Oslo"></a>&ensp; -->
+
+
+ <!-- 	  <a href="https://www.oslo.kommune.no/startpage/"><img src="images/byvaapenet-retina.png" -->
+
+ <!-- 							    style="height:80px" -->
+ <!-- 							    title="Oslo" -->
+ <!-- 							    alt="Oslo"></a>&ensp; -->
+
+
+ <!-- 	  <a href="https://www.forskningsradet.no/no/Forsiden/1173185591033"><img src="images/FR_logo_Eng_rgb.png" -->
+ <!-- 							    style="height:60px" -->
+ <!-- 							    title="NFR" -->
+ <!-- 							    alt="NFR"></a>&ensp; -->
+
+
+
+ <!-- <a href="http://computas.com"><img src="images/computas.png" -->
+ <!-- 							    style="height:100px" -->
+ <!-- 							    title="Computas" -->
+ <!-- 							    alt="Computas"></a>&ensp; -->
+ <!-- 	  <a href="https://www.dnvgl.com/services/ontology-engineering-services-144522"><img src="images/dnvgl.jpg" -->
+ <!-- 							    style="height:80px" -->
+ <!-- 							    title="DNV -->
+ <!-- 							    GL" -->
+ <!-- 							    alt="DNV -->
+ <!-- 								 GL"></a>&ensp; -->
+ <!-- 	</div> -->
+</footer>

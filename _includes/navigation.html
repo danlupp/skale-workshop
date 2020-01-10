@@ -1,0 +1,39 @@
+<!-- <ul class="menu-item">
+	<li class="home"><a href="/">{{ site.title }}</a></li>
+	{% for link in site.data.navigation %}
+    {% if link.lang == page.lang %}
+			{% if link.url contains 'http' %}
+		      {% assign domain = '' %}
+		      {% else %}
+		      {% assign domain = site.url %}
+		  {% endif %}		
+		  <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+		{% endif %}
+  {% endfor %}
+</ul>
+
+--> 
+
+
+<nav>
+    <ul>
+    {% for entry in site.data.navigation %}
+			{% if entry.lang == page.lang %}
+	      {% assign sublinks = entry.sublinks %}
+	      {% if sublinks %}
+	      <li class="dropdown" {{ current }}>
+	        <a class="dropbtn" style="cursor: default;">{{ entry.title }}</a>
+	        <div class="dropdown-content">
+	          {% for sublink in sublinks %}
+	          <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+	          {% endfor %}
+	        </div>
+	      </li>
+	      {% else %}
+	      <li{{ current }}><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
+	      {% endif %}
+			{% endif %}
+    {% endfor %}
+    </ul>
+</nav>
+

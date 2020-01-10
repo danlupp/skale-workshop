@@ -1,0 +1,50 @@
+<header id="masthead">
+  <div class="inner-wrap">
+		<!--<a href="{{ site.url }}/" class="site-title">{{ site.title }}</a> -->
+		<a href="/home.html" class="site-title">{{ site.title }}</a>
+		{% assign pages=site.pages | where:"ref", page.ref %}
+		{% for p in pages %}
+					{% if p.lang == 'en' %}
+						{% if page.lang == 'nor' %}
+							<a href={{ p.url }} style="float: right;"><img src="/images/uk.png" width=50></a>
+						{% endif %}
+					{% endif %}
+					{% if p.lang == 'nor' %}
+						{% if page.lang == 'en' %}
+							<a href={{ p.url }} style="float: right;"><img src="/images/norway.jpg" width=50></a>
+						{% endif %}
+					{% endif %}
+		{% endfor %}
+		<nav role="navigation" class="menu top-menu">
+        {% include navigation.html %}
+    </nav>
+		
+		<!-- language selector-->
+		<!--
+		<select onchange="location = this.value;">
+			{% assign pages=site.pages | where:"ref", page.ref %}
+			{% for p in pages %}
+					{% if p.lang == 'en' %}
+						{% if page.lang == 'en' %}
+							<option value="{{ p.url }}">
+						{% else %}
+							<option value="{{ p.url }}">
+						{% endif %}
+						En
+					{% endif %}
+					{% if p.lang == 'nor' %}
+						{% if page.lang == 'nor' %}
+							<option value="{{ p.url }}" selected>
+						{% else %}
+							<option value="{{ p.url }}">
+						{% endif %}
+							No
+					{% endif %}	
+					</option>
+			{% endfor %}
+    </select>
+		-->	
+		<!-- end of langauge selector-->
+
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
