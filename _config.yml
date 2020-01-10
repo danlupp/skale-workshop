@@ -65,3 +65,5 @@ exclude:
   - spec
   - tmp
   - vendor
+
+theme: jekyll-theme-minimal
