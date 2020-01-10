@@ -66,4 +66,4 @@ exclude:
   - tmp
   - vendor
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-skinny-bones
